@@ -1,20 +1,18 @@
 #include<stdio.h>
 
-int recursiveLinearSearch(int arr[], int size, int search, int index)
+int iterativeLinearSearch(int arr[], int size, int search)
 {
     int count = 0;
-    if (index >= size)
+    for (int i = 0; i < size; i++)
     {
-        return 0;
+        if (arr[i] == search)
+        {
+            printf("Element found at index %d\n", i);
+            count++;
+        }
     }
-    if (arr[index] == search)
-    {
-        printf("Element found at index %d\n", index);
-        count++;
-    }
-    return count + recursiveLinearSearch(arr, size, search, index + 1);
+    return count;
 }
-
 
 int main()
 {
@@ -34,7 +32,7 @@ int main()
     printf("\nEnter the element to search: ");
     scanf("%d", &search);
 
-    int iresult = recursiveLinearSearch(arr, size, search, 0);
+    int iresult = iterativeLinearSearch(arr, size, search);
 
-    printf("\nRecursive Search Result: %d\n", iresult);
+    printf("\nIterative Search Result: %d\n", iresult);
 }
