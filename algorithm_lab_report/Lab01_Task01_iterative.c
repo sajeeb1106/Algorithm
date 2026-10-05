@@ -33,7 +33,6 @@ int main()
     }
 
     printf("\n");
-
     int max, min;
 
     iterativeLinearMaxMin(arr, size, &max, &min);
