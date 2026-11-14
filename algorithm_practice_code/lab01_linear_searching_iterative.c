@@ -25,7 +25,6 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    printf("\n");
     printf("Enter the value to search: ");
     scanf("%d", &search);
 
