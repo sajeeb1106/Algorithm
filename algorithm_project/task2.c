@@ -93,7 +93,7 @@ void display(ReliefRequest arr[], int n)
     }
 }
 
-int main(void) 
+int main() 
 {
     ReliefRequest requests[MAX], temp[MAX], idSorted[MAX];
     int n, targetID, index;
